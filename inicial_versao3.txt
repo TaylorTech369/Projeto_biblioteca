@@ -1,0 +1,148 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="dark" />
+
+      <View style={styles.livro_aberto}>
+        {/* Detalhe da Dobra Central */}
+        <View style={styles.lombada_interna} />
+
+        <View style={styles.pagina_direita}>
+          
+          {/* Cabeçalho */}
+          <View style={styles.header}>
+            <Text style={styles.data_texto}>10 de Abril, 2026</Text>
+            <Text style={styles.titulo_app}>Biblioteca Pessoal</Text>
+            <View style={styles.linha_decorativa} />
+          </View>
+
+          {/* Mensagem de Entrada / Status */}
+          <View style={styles.secao_mensagem}>
+            <Text style={styles.saudacao}>Olá, Bibliotecário.</Text>
+            <Text style={styles.mensagem_corpo}>
+              "O tempo não corre aqui dentro. Organize seus pensamentos com calma."
+            </Text>
+          </View>
+
+          {/* Menu de Botões (Navegação) */}
+          <View style={styles.container_botoes}>
+            <TouchableOpacity style={styles.botao_livro}>
+              <Text style={styles.texto_botao}>📜 Cronogramas</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao_livro}>
+              <Text style={styles.texto_botao}>⏳ Alarmes e Foco</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.botao_livro}>
+              <Text style={styles.texto_botao}>🖋️ Novas Listas</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Rodapé Decorativo */}
+          <Text style={styles.numero_pagina}>pág. 1</Text>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F2E8D5', // Fundo Carvalho Claro
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  livro_aberto: {
+    backgroundColor: '#FFFBF2', // Papel Marfim
+    width: '90%',
+    height: '85%',
+    borderRadius: 5,
+    flexDirection: 'row',
+    elevation: 12,
+    shadowColor: '#5D4037',
+    shadowOffset: { width: 5, height: 5 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    borderLeftWidth: 8,
+    borderLeftColor: '#8D6E63', // Cor da "Capa" aparecendo na lateral
+  },
+  lombada_interna: {
+    width: 15,
+    height: '100%',
+    backgroundColor: 'rgba(0,0,0,0.03)',
+    borderRightWidth: 1,
+    borderRightColor: 'rgba(0,0,0,0.05)',
+  },
+  pagina_direita: {
+    flex: 1,
+    padding: 20,
+    justifyContent: 'space-between',
+  },
+  header: {
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  data_texto: {
+    fontSize: 12,
+    color: '#A1887F',
+    textTransform: 'uppercase',
+    letterSpacing: 2,
+  },
+  titulo_app: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#5D4037',
+    marginTop: 5,
+  },
+  linha_decorativa: {
+    width: '60%',
+    height: 1,
+    backgroundColor: '#D7BC95',
+    marginTop: 10,
+  },
+  secao_mensagem: {
+    marginVertical: 30,
+    paddingHorizontal: 10,
+  },
+  saudacao: {
+    fontSize: 18,
+    color: '#5D4037',
+    fontWeight: '600',
+    marginBottom: 8,
+  },
+  mensagem_corpo: {
+    fontSize: 16,
+    color: '#8D6E63',
+    fontStyle: 'italic',
+    lineHeight: 22,
+  },
+  container_botoes: {
+    width: '100%',
+    gap: 12, // Espaço entre os botões
+  },
+  botao_livro: {
+    backgroundColor: 'rgba(215, 188, 149, 0.2)', // Tom de papel levemente mais escuro
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: '#D7BC95',
+    borderStyle: 'dashed', // Dá um toque de "feito à mão"
+  },
+  texto_botao: {
+    fontSize: 16,
+    color: '#5D4037',
+    fontWeight: '500',
+  },
+  numero_pagina: {
+    textAlign: 'center',
+    fontSize: 12,
+    color: '#D7BC95',
+    marginBottom: 5,
+  }
+});
