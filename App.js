@@ -1,14 +1,35 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect} from 'react';
+import * as NavigationBar from 'expo-navigation-bar';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
+
+        useEffect(() => {
+        NavigationBar.setBehaviorAsync("inset-swipe");
+        // NavigationBar.setBehaviorAsync("overlay-swipe"); // permite abrir com swipe
+        NavigationBar.setVisibilityAsync("hidden"); // esconde a barra
+        NavigationBar.setBackgroundColorAsync("#000000");
+      }, []);
+
   return (
     <View style={styles.container}>
+      <StatusBar hidden={true} />
 
-      <View style={styles.caixa_do_meio}>
+      <View style={styles.caixa_superior}>
 
-        <text style={styles.boas_vindas}>Bem vindo ao Projeto Biblioteca</text>
-      <StatusBar style="auto" />
+        <Text style={styles.boas_vindas}>Bem vindo ao Projeto Biblioteca</Text>
+
+      </View>
+
+      <View style={styles.caixa_inferior}>
+        <TouchableOpacity 
+          style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
+          onPress={() => alert('Clicou!')}>
+          <Text style={{ color: '#fdca8b' }}>Botão</Text>
+        </TouchableOpacity>
+
+        {/* <Text style={styles.texto_botao}>Botão Botão Botão Botão Botão</Text> */}
 
       </View>
       
@@ -22,28 +43,47 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffe8c2',
     // backgroundColor: '#ffdda8',
     // backgroundColor: '#D8B589',
-    alignItems: 'center',
+    justifyContent: 'space-between',
     // justifyContent: 'center',
     // paddingTop: 50,
   },
 
   boas_vindas: {
     // backgroundColor: '#d2a976',
-    fontSize: 32,
-    paddingTop: 10,
+    // fontSize: 32,
+    fontSize: 20,
+    padding: 20,
     // color: '#ae8048',
     color: '#ffc680',
   },
 
-  caixa_do_meio: {
+  caixa_superior: {
     // backgroundColor: '#edc98e',
     // backgroundColor: '#c19667',
+    // top: 0,
     backgroundColor: '#a88968',
-    width: '55vw',
-    height: '100vh',
+    width: '100%',
+    // width: '55vw',
+    // height: '100%',
     alignItems: 'center',
     borderColor: '#866644',
     borderWidth: 3,
   },
+
+  caixa_inferior: {
+    // bottom: 0,
+    backgroundColor: '#a58d72',
+    padding: 20,
+    width: '100%',
+    alignItems: 'center',
+    borderColor: '#856a4d',
+    borderWidth: 3,
+  },
+
+  texto_botao: {
+    fontSize: 20,
+    padding: 20,
+    color: '#fdca8b',
+  }
   
 });
