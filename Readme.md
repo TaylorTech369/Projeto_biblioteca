@@ -10,7 +10,7 @@ Major: Mudou tudo ou quebrou algo antigo?
 - Fix → Correção de bugs
 - Feature → Novas funcionalidades
 - Breaking Change → Alterações que quebram compatibilidade
-- Refactor → Mudanças internas no código (sem alterar comportamento)
+- Refactor → Mudanças internas no código (sem alterar comportamento), reogarnizar e deixar o código mais legivel
 - Performance → Melhorias de desempenho
 - Docs → Alterações na documentação
 - Chore → Configuração, build, dependências e ambiente
