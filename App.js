@@ -3,6 +3,10 @@ import React, { useEffect} from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
+// Cores:
+//
+
+
 export default function App() {
 
         useEffect(() => {
@@ -60,20 +64,19 @@ const styles = StyleSheet.create({
   caixa_superior: {
     // backgroundColor: '#edc98e',
     // backgroundColor: '#c19667',
-    // top: 0,
+    height: 80,
     backgroundColor: '#a88968',
     width: '100%',
-    // width: '55vw',
-    // height: '100%',
     alignItems: 'center',
+    justifyContent: 'center',
     borderColor: '#866644',
     borderWidth: 3,
   },
 
   caixa_inferior: {
-    // bottom: 0,
     backgroundColor: '#a58d72',
-    padding: 20,
+    height: 80,
+    justifyContent: 'center',
     width: '100%',
     alignItems: 'center',
     borderColor: '#856a4d',
@@ -82,7 +85,6 @@ const styles = StyleSheet.create({
 
   texto_botao: {
     fontSize: 20,
-    padding: 20,
     color: '#fdca8b',
   }
   
