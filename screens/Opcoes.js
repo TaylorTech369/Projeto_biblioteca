@@ -15,7 +15,7 @@ import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
 // color: '#ffc680',
 // color: '#fdca8b',
 
-export default function App() {
+export default function Opcoes() {
 
   useEffect(() => {
     NavigationBar.setBehaviorAsync("inset-swipe");
@@ -27,23 +27,10 @@ export default function App() {
   return (
     <View style={style.container}>
       <StatusBar hidden={true} />
-
       <View style={styles.caixa_superior}>
 
-        <Text style={styles.boas_vindas}>Bem vindo ao Projeto Biblioteca</Text>
-
+        <Text style={styles.boas_vindas}>Opções</Text>
       </View>
-
-      <View style={styles.caixa_inferior}>
-        <TouchableOpacity
-          style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
-          onPress={() => alert('Clicou!')}>
-          <Text style={{ color: '#fdca8b' }}>Botão</Text>
-        </TouchableOpacity>
-
-
-      </View>
-
     </View>
   );
 }

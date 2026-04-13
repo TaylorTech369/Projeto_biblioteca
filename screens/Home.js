@@ -1,29 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
 import style from '../css/estilos';
-import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
-
-// Cores do App.js:
-// backgroundColor: '#ffdda8',
-// backgroundColor: '#D8B589',
-// backgroundColor: '#d2a976',
-// backgroundColor: '#edc98e',
-// backgroundColor: '#c19667',
-// backgroundColor: '#ffe8c2',
-// color: '#ae8048',
-// color: '#ffc680',
-// color: '#fdca8b',
+import React, { useEffect } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import Opcoes from './Opcoes';
+import { Header } from '@react-navigation/stack';
 
 export default function App() {
+  const Drawer = createDrawerNavigator();
+  return (
+    <NavigationContainer >
+      <Drawer.Navigator initialRouteName='Home'
+      screenOptions={{
+        headerStyle: {
+          
+        },
+      }}
+      >
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Opções" component={Opcoes} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  )
+}
 
+function Home() {
   useEffect(() => {
     NavigationBar.setBehaviorAsync("inset-swipe");
     // NavigationBar.setBehaviorAsync("overlay-swipe"); // permite abrir com swipe
     NavigationBar.setVisibilityAsync("hidden"); // esconde a barra
     NavigationBar.setBackgroundColorAsync("#000000");
   }, []);
-
   return (
     <View style={style.container}>
       <StatusBar hidden={true} />
@@ -48,6 +57,17 @@ export default function App() {
   );
 }
 
+
+// Cores do App.js:
+// backgroundColor: '#ffdda8',
+// backgroundColor: '#D8B589',
+// backgroundColor: '#d2a976',
+// backgroundColor: '#edc98e',
+// backgroundColor: '#c19667',
+// backgroundColor: '#ffe8c2',
+// color: '#ae8048',
+// color: '#ffc680',
+// color: '#fdca8b',
 const styles = StyleSheet.create({
 
   boas_vindas: {
