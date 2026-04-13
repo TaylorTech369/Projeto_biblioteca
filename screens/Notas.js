@@ -33,10 +33,7 @@ export default function Notas() {
 function Nota() {
   return(
     <View style={style.container}>
-      <StatusBar hidden={true} />
-      <View style={styles.caixa_superior}>
         <Text style={styles.boas_vindas}>Notas</Text>
-      </View>
     </View>
   )
 }

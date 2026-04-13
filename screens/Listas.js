@@ -15,24 +15,7 @@ export default function Listas() {
 
   return (
     <View style={style.container}>
-      <StatusBar hidden={true} />
-
-      <View style={styles.caixa_superior}>
-
-        <Text style={styles.boas_vindas}>Bem vindo ao Projeto Biblioteca</Text>
-
-      </View>
-
-      <View style={styles.caixa_inferior}>
-        <TouchableOpacity
-          style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
-          onPress={() => alert('Clicou!')}>
-          <Text style={{ color: '#fdca8b' }}>Botão</Text>
-        </TouchableOpacity>
-
-
-      </View>
-
+        <Text style={styles.boas_vindas}>Listas</Text>
     </View>
   );
 }
