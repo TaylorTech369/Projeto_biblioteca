@@ -48,13 +48,7 @@ export default function App() {
   );
 }
 
-<<<<<<< HEAD
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffe8c2',
-    justifyContent: 'space-between',
-  },
 
   boas_vindas: {
     fontSize: 20,
@@ -83,6 +77,4 @@ const styles = StyleSheet.create({
   },
 
 });
-=======
 
->>>>>>> 4c51699f85c46e763541dd0fe6df86b6bc2068ec
