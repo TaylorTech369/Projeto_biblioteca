@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
-import styles from '../css/estilos';
-import {  Text, View, TouchableOpacity } from 'react-native';
+import style from '../css/estilos';
+import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
 
 // Cores do App.js:
 // backgroundColor: '#ffdda8',
@@ -25,7 +25,7 @@ export default function App() {
   }, []);
 
   return (
-    <View style={styles.container}>
+    <View style={style.container}>
       <StatusBar hidden={true} />
 
       <View style={styles.caixa_superior}>
@@ -77,4 +77,3 @@ const styles = StyleSheet.create({
   },
 
 });
-
