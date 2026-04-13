@@ -13,3 +13,20 @@ Resumo da lógica:
 PATCH: Consertou algo? Aumenta o terceiro.
 MINOR: Criou algo novo? Aumenta o segundo (e zera o terceiro).
 MAJOR: Mudou tudo ou quebrou algo antigo? Aumenta o primeiro (e zera os outros dois).
+
+---
+
+Nomeclaturas de Commit sendo usados:
+
+Patch: Consertou algo?
+Minor: Criou algo novo?
+Major: Mudou tudo ou quebrou algo antigo?
+
+Fix → Correção de bugs
+Feature → Novas funcionalidades
+Breaking Change → Alterações que quebram compatibilidade
+Refactor → Mudanças internas no código (sem alterar comportamento)
+Performance → Melhorias de desempenho
+Docs → Alterações na documentação
+Chore → Configuração, build, dependências e ambiente
+Test → Criação ou atualização de testes
