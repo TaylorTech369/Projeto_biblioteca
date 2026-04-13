@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import styles from '../css/estilos';
+import {  Text, View, TouchableOpacity } from 'react-native';
 
 // Cores do App.js:
 // backgroundColor: '#ffdda8',
@@ -47,6 +48,7 @@ export default function App() {
   );
 }
 
+<<<<<<< HEAD
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -81,3 +83,6 @@ const styles = StyleSheet.create({
   },
 
 });
+=======
+
+>>>>>>> 4c51699f85c46e763541dd0fe6df86b6bc2068ec
