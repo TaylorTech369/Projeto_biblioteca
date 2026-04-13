@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
 
-        useEffect(() => {
-        NavigationBar.setBehaviorAsync("inset-swipe");
-        // NavigationBar.setBehaviorAsync("overlay-swipe"); // permite abrir com swipe
-        NavigationBar.setVisibilityAsync("hidden"); // esconde a barra
-        NavigationBar.setBackgroundColorAsync("#000000");
-      }, []);
+  useEffect(() => {
+    NavigationBar.setBehaviorAsync("inset-swipe");
+    // NavigationBar.setBehaviorAsync("overlay-swipe"); // permite abrir com swipe
+    NavigationBar.setVisibilityAsync("hidden"); // esconde a barra
+    NavigationBar.setBackgroundColorAsync("#000000");
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -23,7 +23,7 @@ export default function App() {
       </View>
 
       <View style={styles.caixa_inferior}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
           onPress={() => alert('Clicou!')}>
           <Text style={{ color: '#fdca8b' }}>Botão</Text>
@@ -32,7 +32,7 @@ export default function App() {
         {/* <Text style={styles.texto_botao}>Botão Botão Botão Botão Botão</Text> */}
 
       </View>
-      
+
     </View>
   );
 }
@@ -85,5 +85,5 @@ const styles = StyleSheet.create({
     padding: 20,
     color: '#fdca8b',
   }
-  
+
 });
