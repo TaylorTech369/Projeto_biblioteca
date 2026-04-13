@@ -1,11 +1,11 @@
 
-# Nomeclaturas de Commit sendo usados:
+# Antiga Nomeclaturas de Commit sendo usados:
 
 Patch: Consertou algo?
 Minor: Criou algo novo?
 Major: Mudou tudo ou quebrou algo antigo?
 
-# Atualização de Nomeclatura abaixo:
+# Nomeclaturas de Commit sendo usados atualmente:
 
 - Fix → Correção de bugs
 - Feature → Novas funcionalidades
