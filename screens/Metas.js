@@ -15,7 +15,7 @@ export default function Metas() {
 
   return (
     <View style={style.container}>
-      <Text style={styles.boas_vindas}>Listas</Text>
+      <Text style={styles.boas_vindas}>Metas</Text>
     </View>
   );
 }

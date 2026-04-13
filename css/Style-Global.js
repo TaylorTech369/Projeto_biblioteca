@@ -13,9 +13,10 @@ import { StyleSheet } from 'react-native';
 
 const style = StyleSheet.create({
   container: {
+    height: '100%',
     flex: 1,
     backgroundColor: '#ffe8c2',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
 });
 

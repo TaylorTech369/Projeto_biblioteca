@@ -14,6 +14,7 @@ export default function App() {
     <NavigationContainer >
       <Drawer.Navigator initialRouteName='Home'
         screenOptions={{
+          headerShown: false,
           headerStyle: {
             backgroundColor: '#a88968',
           },
@@ -23,9 +24,13 @@ export default function App() {
           },
         }}
       >
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Notas" component={Notas} />
-        <Drawer.Screen name="Opções" component={Opcoes} />
+        <Drawer.Screen name="Home" component={Home} options={{
+          headerShown: true,
+        }} />
+        <Drawer.Screen name="Notas" component={Notas}/>
+        <Drawer.Screen name="Opções" component={Opcoes} options={{
+          headerShown: true,
+        }} />
       </Drawer.Navigator>
     </NavigationContainer>
   )

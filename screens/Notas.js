@@ -2,11 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
 import style from '../css/Style-Global';
-import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Listas from './Listas';
 import Metas from './Metas';
+import { useNavigation } from '@react-navigation/native';
 export default function Notas() {
 
   useEffect(() => {
@@ -18,22 +19,31 @@ export default function Notas() {
   const Bottom = createBottomTabNavigator();
   return (
 
-      <Bottom.Navigator
+    <Bottom.Navigator
       screenOptions={{
         headerShown: false
       }}
-      >
-        <Bottom.Screen name="Notas" component={Nota} />
-        <Bottom.Screen name="Listas" component={Listas} />
-        <Bottom.Screen name="Metas" component={Metas} />
-      </Bottom.Navigator>
+    >
+      <Bottom.Screen name="Notas" component={Nota} />
+      <Bottom.Screen name="Listas" component={Listas} />
+      <Bottom.Screen name="Metas" component={Metas} />
+    </Bottom.Navigator>
   );
 }
 
 function Nota() {
-  return(
-    <View style={style.container}>
-        <Text style={styles.boas_vindas}>Notas</Text>
+  const useNavitationDrawer = useNavigation(); 
+  return (
+
+    <View style={[ style.container, { flexDirection: 'column' }]}>
+      <TouchableOpacity
+        style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
+        onPress={() => {
+          useNavitationDrawer.goBack();
+        }}>
+      </TouchableOpacity>
+
+      <Text style={styles.boas_vindas}>Notas</Text>
     </View>
   )
 }
