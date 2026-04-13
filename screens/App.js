@@ -3,9 +3,16 @@ import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-// Cores:
-//
-
+// Cores do App.js:
+// backgroundColor: '#ffdda8',
+// backgroundColor: '#D8B589',
+// backgroundColor: '#d2a976',
+// backgroundColor: '#edc98e',
+// backgroundColor: '#c19667',
+// backgroundColor: '#ffe8c2',
+// color: '#ae8048',
+// color: '#ffc680',
+// color: '#fdca8b',
 
 export default function App() {
 
@@ -33,7 +40,6 @@ export default function App() {
           <Text style={{ color: '#fdca8b' }}>Botão</Text>
         </TouchableOpacity>
 
-        {/* <Text style={styles.texto_botao}>Botão Botão Botão Botão Botão</Text> */}
 
       </View>
 
@@ -45,25 +51,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffe8c2',
-    // backgroundColor: '#ffdda8',
-    // backgroundColor: '#D8B589',
     justifyContent: 'space-between',
-    // justifyContent: 'center',
-    // paddingTop: 50,
   },
 
   boas_vindas: {
-    // backgroundColor: '#d2a976',
-    // fontSize: 32,
     fontSize: 20,
     padding: 20,
-    // color: '#ae8048',
     color: '#ffc680',
   },
 
   caixa_superior: {
-    // backgroundColor: '#edc98e',
-    // backgroundColor: '#c19667',
     height: 80,
     backgroundColor: '#a88968',
     width: '100%',
@@ -82,10 +79,5 @@ const styles = StyleSheet.create({
     borderColor: '#856a4d',
     borderWidth: 3,
   },
-
-  texto_botao: {
-    fontSize: 20,
-    color: '#fdca8b',
-  }
 
 });
