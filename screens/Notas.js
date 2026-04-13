@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
-import style from '../css/estilos';
+import style from '../css/Style-Global';
 import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
 
-export default function App() {
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Listas from './Listas';
+import Metas from './Metas';
+export default function Notas() {
 
   useEffect(() => {
     NavigationBar.setBehaviorAsync("inset-swipe");
@@ -12,29 +15,30 @@ export default function App() {
     NavigationBar.setVisibilityAsync("hidden"); // esconde a barra
     NavigationBar.setBackgroundColorAsync("#000000");
   }, []);
-
+  const Bottom = createBottomTabNavigator();
   return (
+
+      <Bottom.Navigator
+      screenOptions={{
+        headerShown: false
+      }}
+      >
+        <Bottom.Screen name="Notas" component={Nota} />
+        <Bottom.Screen name="Listas" component={Listas} />
+        <Bottom.Screen name="Metas" component={Metas} />
+      </Bottom.Navigator>
+  );
+}
+
+function Nota() {
+  return(
     <View style={style.container}>
       <StatusBar hidden={true} />
-
       <View style={styles.caixa_superior}>
-
-        <Text style={styles.boas_vindas}>Bem vindo ao Projeto Biblioteca</Text>
-
+        <Text style={styles.boas_vindas}>Notas</Text>
       </View>
-
-      <View style={styles.caixa_inferior}>
-        <TouchableOpacity
-          style={{ padding: 15, backgroundColor: '#866644', borderRadius: 10 }}
-          onPress={() => alert('Clicou!')}>
-          <Text style={{ color: '#fdca8b' }}>Botão</Text>
-        </TouchableOpacity>
-
-
-      </View>
-
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({

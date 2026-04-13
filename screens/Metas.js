@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect } from 'react';
 import * as NavigationBar from 'expo-navigation-bar';
-import style from '../css/estilos';
+import style from '../css/Style-Global';
 import { StyleSheet,  Text, View, TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function Metas() {
 
   useEffect(() => {
     NavigationBar.setBehaviorAsync("inset-swipe");
